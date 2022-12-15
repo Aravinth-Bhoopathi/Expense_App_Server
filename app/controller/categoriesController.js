@@ -26,31 +26,6 @@ categoriesController.list = (req, res) => {
         })
 }
 
-// categoriesController.update = (req, res) => {
-//     const body = req.body
-//     const id = req.params.id
-//     const user = req.tokenData._id
-//     Category.findOneAndUpdate({id, user}, body, {new:true})
-//         .then((category) => {
-//             res.json(category)
-//         })
-//         .catch((err) => {
-//             res.json(err)
-//         })
-// }
-
-// categoriesController.delete = (req, res) => {
-//     const id = req.params.id
-//     const user = req.tokenData._id
-//     Category.findOneAndDelete({id, user})
-//         .then((category) => {
-//             res.json(category)
-//         })
-//         .catch((err) => {
-//             res.json(err)
-//         })
-// }
-
 categoriesController.update = (req, res) => {
     const id = req.params.id 
     const user = req.tokenData._id 

@@ -17,17 +17,12 @@ router.put('/api/user/update',authenticateUser, upload.single('image'), usersCon
 router.post('/api/category', authenticateUser, categoriesController.create)
 router.get('/api/category', authenticateUser, categoriesController.list)
 router.put('/api/category/:id', authenticateUser, categoriesController.update)
-//router.delete('/api/category', authenticateUser, categoriesController.delete)
 
 router.post('/api/expense', authenticateUser, expensesController.create)
 router.get('/api/expense', authenticateUser, expensesController.list)
 router.put('/api/expense/:id', authenticateUser, expensesController.update)
-//router.delete('/api/expense', authenticateUser, expensesController.delete)
-
 
 router.put('/api/budget/update', authenticateUser, budgetController.update)
 router.get('/api/budget/list', authenticateUser, budgetController.list)
-
-
 
 module.exports = router
